@@ -36,11 +36,8 @@ function calculateSalesTax(salesData, taxRates) {
                                   };
     }
     salesSumByProvince = sumSales(salesData[i].sales);
-    //adds sales sum to business by province
     output[salesData[i].name].totalSales += salesSumByProvince;
-    //calculates sales tax by province
     salesTaxByProvince = calculateTax(salesSumByProvince, taxRates[salesData[i].province]);
-    //adds sales tax by province to business name object
     output[salesData[i].name].totalTaxes += salesTaxByProvince;
   }
   return output;
@@ -54,7 +51,8 @@ function calculateTax(totalSales, taxRate) {
 function sumSales(saleArray) {
   var sum = 0;
   saleArray.forEach(function(sale) {
-    sum += sale;
+    sum +=
+     sale;
   });
   return sum;
 }
