@@ -31,9 +31,9 @@ function calculateSalesTax(salesData, taxRates) {
     //adds current business name object to output if true
     if (!output[`${salesData[i]['name']}`]) {
       output[`${salesData[i]['name']}`] = {
-        totalSales: 0,
-        totalTaxes: 0
-      };
+                                            totalSales: 0,
+                                            totalTaxes: 0
+                                          };
     }
     //calculates total sales by province
     for (var j = 0; j < salesData[i]['sales'].length; j++) {
