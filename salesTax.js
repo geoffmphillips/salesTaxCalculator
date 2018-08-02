@@ -23,7 +23,7 @@ var companySalesData = [
 ];
 
 function calculateSalesTax(salesData, taxRates) {
-  var output = {}
+  var output = {};
 
   for (var i = 0; i < salesData.length; i++) {
     var salesSumByProvince = 0;
